@@ -1,0 +1,81 @@
+.sidebar {
+  width: 220px;       /* default desktop width */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  height: fit-content;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Username display */
+.sidebar p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Tablet and mobile adjustments */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 180px;
+    padding: 15px;
+  }
+  .sidebar p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 140px;
+    padding: 10px;
+  }
+  .sidebar li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    z-index: 100;
+  }
+  .sidebar ul {
+    display: flex;
+    gap: 5px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .sidebar li {
+    padding: 5px;
+  }
+  .sidebar p {
+    display: none; /* hide username at bottom nav to save space */
+  }
+}

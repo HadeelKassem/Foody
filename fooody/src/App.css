@@ -1,0 +1,147 @@
+body:not(.welcome-route) {
+  background-color: #bad5ff !important;
+  background-image: url(./assets/bg11.png) !important;
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 80px; /* navbar height */
+  flex-shrink: 0;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  height: fit-content;
+}
+
+/* Feed area */
+.feed {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Right sidebar */
+.right-sidebar {
+  flex-shrink: 0;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+}
+/* --- Mobile responsiveness --- */
+@media (max-width: 1024px) {
+  .content-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .sidebar,
+  .right-sidebar {
+    width: 100%;        /* full width on small screens */
+    position: relative;  
+    top: 0;
+    margin-bottom: 15px;
+    box-sizing: border-box;  /* ensure padding doesn't overflow */
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    padding: 5px;
+  }
+  .sidebar,
+  .right-sidebar {
+    padding: 10px;
+    width: 100%;
+    margin-left: 0;
+
+   
+  }
+ 
+  .dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .profile-header,
+  .dark-mode .profile-posts-section,
+  .dark-mode .modal-content,
+  .dark-mode .user-list-item {
+    background-color: #1e1e1e!important;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .profile-avatar-placeholder,
+  .dark-mode .user-list-avatar-placeholder {
+    background-color: #333!important;
+    color: #fff;
+  }
+  
+  .dark-mode button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  .dark-mode .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .dark-mode .posts-grid .post-card {
+    background-color: #1e1e1e;
+ 
+  }
+  .dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .profile-header,
+  .dark-mode .profile-posts-section,
+  .dark-mode .modal-content,
+  .dark-mode .user-list-item {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .profile-avatar-placeholder,
+  .dark-mode .user-list-avatar-placeholder {
+    background-color: #333!important;
+    color: #fff;
+  }
+  
+  .dark-mode button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  .dark-mode .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .dark-mode .posts-grid .post-card {
+    background-color: #1e1e1e;
+  }
+  
+}  
